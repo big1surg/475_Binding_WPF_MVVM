@@ -1,0 +1,36 @@
+﻿<Window x:Class="PracticeBinding.AddMember"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticeBinding"
+        mc:Ignorable="d"
+        Title="AddMember" Height="170" Width="300">
+    <Grid Margin="0 10 0 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Label VerticalAlignment="Center" Foreground="Black" Grid.Column="0" Grid.Row="0" FontWeight="Bold">First Name:</Label>
+        <Label VerticalAlignment="Center" Foreground="Black" Grid.Column="0" Grid.Row="1" FontWeight="Bold">Last Name:</Label>
+        <Label VerticalAlignment="Center" Foreground="Black" Grid.Column="0" Grid.Row="2" FontWeight="Bold">Email:</Label>
+
+        <!-- the binding should just send the information-->
+        <TextBox Name="FirstNameTextBox"  VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" Width="200"/>
+        <TextBox Name="LastNameTextBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Width="200"/>
+        <TextBox Name="EmailTextBox" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Width="200"/>
+
+
+        <WrapPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Margin="3" Width="80" Click="Button_Click_Save">Save</Button>
+            <Button Margin="3" Width="80" Click="Button_Click_Cancel">Cancel</Button>
+        </WrapPanel>
+    </Grid>
+</Window>
